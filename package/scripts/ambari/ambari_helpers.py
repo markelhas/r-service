@@ -5,10 +5,15 @@ def package_dir(): return os.path.realpath(__file__).split('/package')[0] + '/pa
 
 def add_repos():
   distribution = platform.linux_distribution()[0].lower()
+  version = platform.linux_distribution()[1].lower().split('.')[0]
   #TODO: add ubuntu
-  if distribution in ['centos', 'redhat', 'red hat enterprise linux server'] :
-    repo_dir = package_dir()+'files/repos/rhel6/'
-    os_repo_dir = '/etc/yum.repos.d/'
+  if distribution in ['centos', 'redhat', 'red hat enterprise linux server', 'centos linux'] :
+    if version == '7':
+      repo_dir = package_dir()+'files/repos/rhel6/'
+      os_repo_dir = '/etc/yum.repos.d/'
+    elif version == '6':
+      repo_dir = package_dir()+'files/repos/rhel7/'
+      os_repo_dir = '/etc/yum.repos.d/'
 
   for repo in os.listdir(repo_dir):
     if not os.path.isfile(os_repo_dir + repo):
