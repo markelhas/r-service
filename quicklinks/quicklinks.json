@@ -1,0 +1,35 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+    "protocol":
+    {
+      "type":"https",
+      "checks":[
+        {
+          "property":"ssl_enable",
+          "desired":"true",
+          "site":"rstudio-site"
+        }
+      ]
+    },
+
+    "links": [
+      {
+        "name": "rstudio_ui",
+        "label": "RStudio",
+        "requires_user_name": "false",
+        "component_name": "RSTUDIO_SERVER",
+        "url":"%@://%@:%@/",
+        "port":{
+          "http_property": "hue.server.port",
+          "http_default_port": "8888",
+          "https_property": "hue.server.port",
+          "https_default_port": "8888",
+          "regex": "^(\\d+)$",
+          "site": "hue-site"
+        }
+      }
+    ]
+  }
+}
