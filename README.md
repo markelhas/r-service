@@ -6,8 +6,9 @@ To deploy, copy the entire directory into your Ambari stacks folder and restart 
 Installing the stack enables the EPEL yum repo on all designated client nodes. Installation requires connectivity to [CRAN](http://cran.us-r-project.org) for any package added to the default list (See Configuration Options).
 
 ```
-git clone https://github.com/radcheb/r-service
-sudo cp -r r-service /var/lib/ambari-server/resources/stacks/HDP/2.6/services/
+VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9]\.[0-9]\).*/\1/'`
+sudo rm -rf /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/r-service  
+sudo git clone https://github.com/markelhas/r-service /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/r-service
 sudo service ambari-server restart
 ```
 
