@@ -41,6 +41,12 @@
               <service>YARN</service>
               <service>MAPREDUCE2</service>
             </requiredServices>
+			<quickLinksConfigurations>
+			  <quickLinksConfiguration>
+				<fileName>quicklinks.json</fileName>
+				<default>true</default>
+          	  </quickLinksConfiguration>
+			</quickLinksConfigurations>            
         </service>
     </services>
 </metainfo>
