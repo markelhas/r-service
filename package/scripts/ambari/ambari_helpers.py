@@ -8,10 +8,10 @@ def add_repos():
   version = platform.linux_distribution()[1].lower().split('.')[0]
   #TODO: add ubuntu
   if distribution in ['centos', 'redhat', 'red hat enterprise linux server', 'centos linux'] :
-    if version == '7':
+    if version == '6':
       repo_dir = package_dir()+'files/repos/rhel6/'
       os_repo_dir = '/etc/yum.repos.d/'
-    elif version == '6':
+    elif version == '7':
       repo_dir = package_dir()+'files/repos/rhel7/'
       os_repo_dir = '/etc/yum.repos.d/'
 

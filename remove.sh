@@ -1,7 +1,7 @@
 yum remove -y R-core
-rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.2/services/r-service
+rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.6/services/r-service
 
-CLUSTER=Sandbox
+CLUSTER=cosmos
 USER=admin
 PASS=admin
 SERVICE=R

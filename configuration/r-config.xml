@@ -10,6 +10,10 @@
  <property require-input="false">
     <name>r.repo_url</name>
     <description>URL for downloading additional R packages</description>
+    <!--
     <value>http://cran.us.r-project.org</value>
+    <value>https://cran.dcc.fc.up.pt/</value>
+    -->
+    <value>http://cran.radicaldevelop.com/</value>
  </property>
 </configuration>

@@ -22,7 +22,7 @@
             </components>
             <osSpecifics>
               <osSpecific>
-                <osFamily>redhat6</osFamily>
+                <osFamily>redhat7</osFamily>
                 <packages>
                   <package><name>epel-release</name></package>
                   <package><name>R</name></package>

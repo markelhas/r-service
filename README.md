@@ -7,7 +7,7 @@ Installing the stack enables the EPEL yum repo on all designated client nodes. I
 
 ```
 git clone https://github.com/radcheb/r-service
-sudo cp -r r-service /var/lib/ambari-server/resources/stacks/HDP/2.2/services/
+sudo cp -r r-service /var/lib/ambari-server/resources/stacks/HDP/2.6/services/
 sudo service ambari-server restart
 ```
 
