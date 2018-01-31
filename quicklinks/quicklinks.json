@@ -22,12 +22,12 @@
         "component_name": "RSTUDIO_SERVER",
         "url":"%@://%@:%@/",
         "port":{
-          "http_property": "hue.server.port",
-          "http_default_port": "8888",
-          "https_property": "hue.server.port",
-          "https_default_port": "8888",
+          "http_property": "rstudio.server.port",
+          "http_default_port": "8787",
+          "https_property": "rstudio.server.port",
+          "https_default_port": "8787",
           "regex": "^(\\d+)$",
-          "site": "hue-site"
+          "site": "rstudio-site"
         }
       }
     ]
