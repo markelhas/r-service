@@ -2,10 +2,39 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
  
 <configuration>
+  <property>
+    <name>rstudio.download.url</name>
+    <value>https://download2.rstudio.org/rstudio-server-rhel-1.1.419-x86_64.rpm</value>
+ </property>
+  <property>
+    <name>rstudio.server.log</name>
+    <value>/var/log/rstudio_server.log</value>
+    <description>Log file for rstudio server service</description>
+  </property>
+  <property>
+    <name>rstudio.install.log</name>
+    <value>/var/log/rstudio_install.log</value>
+    <description>Log file for rstudio server installation</description>
+  </property>
+  <property>
+    <name>rstudio.server.port</name>
+    <value>8787</value>
+ </property>
+ <property>
+    <name>rstudio.user.name</name>
+    <value>admin</value>
+ </property> 
+ <property>
+    <name>shiny.server.port</name>
+    <value>3838</value>
+ </property>
  <property require-input="false">
     <name>r.libs</name>
     <description>Comma separated list of R libs to install</description>
+    <!--
     <value>ggplot2,RCurl,Rcpp,RJSONIO,bitops,digest,functional,reshape2,stringr,plyr,caTools,rJava,Hmisc,plyr,dplyr,devtools,Rook,R.methodsS3,nnet,randomForest,rpart,C50,gbm,e1071,glmnet,bnlearn,cluster,bigrf,biclust,data.table,RJDBC</value>
+     -->
+    <value>ggplot2</value>
  </property>
  <property require-input="false">
     <name>r.repo_url</name>

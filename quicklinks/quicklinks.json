@@ -4,22 +4,17 @@
   "configuration": {
     "protocol":
     {
-      "type":"https",
+      "type":"http",
       "checks":[
-        {
-          "property":"ssl_enable",
-          "desired":"true",
-          "site":"rstudio-site"
-        }
       ]
     },
 
     "links": [
       {
         "name": "rstudio_ui",
-        "label": "RStudio",
+        "label": "RStudio UI",
         "requires_user_name": "false",
-        "component_name": "RSTUDIO_SERVER",
+        "component_name": "R_SERVER",
         "url":"%@://%@:%@/",
         "port":{
           "http_property": "rstudio.server.port",
@@ -27,9 +22,24 @@
           "https_property": "rstudio.server.port",
           "https_default_port": "8787",
           "regex": "^(\\d+)$",
-          "site": "rstudio-site"
+          "site": "r-config"
         }
-      }
+      },
+      {
+        "name": "shiny_ui",
+        "label": "Shiny UI",
+        "requires_user_name": "false",
+        "component_name": "R_SERVER",
+        "url":"%@://%@:%@/",
+        "port":{
+          "http_property": "shiny.server.port",
+          "http_default_port": "3838",
+          "https_property": "shiny.server.port",
+          "https_default_port": "3838",
+          "regex": "^(\\d+)$",
+          "site": "r-config"
+		 }
+       }
     ]
   }
 }

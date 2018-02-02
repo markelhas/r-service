@@ -1,0 +1,32 @@
+{
+  "R Server": {
+    "service": [],
+    "RSERVER": [
+      {
+        "name": "rserver_webui",
+        "label": "RServer Web UI",
+        "description": "This host-level alert is triggered if the RServer Web UI is unreachable.",
+        "interval": 1,
+        "scope": "HOST",
+        "source": {
+          "type": "PORT",
+          "uri": "{{r-config/rstudio.server.port}}",
+          "default_port": 8787,
+          "reporting": {
+            "ok": {
+              "text": "TCP OK - {0:.3f}s response on port {1}"
+            },
+            "warning": {
+              "text": "TCP OK - {0:.3f}s response on port {1}",
+              "value": 1.5
+            },
+            "critical": {
+              "text": "Connection failed: {0} to {1}:{2}",
+              "value": 5
+            }
+          }
+        }
+      }
+    ]
+  }
+}
