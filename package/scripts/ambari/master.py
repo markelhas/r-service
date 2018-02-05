@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from resource_management import *
 import ambari_helpers as helpers
 
@@ -12,20 +11,17 @@ class Master(Script):
     import params
     env.set_params(params)
 
-  def status(self, env):
-    import params
-    env.set_params(params)
-    Execute('service rstudio-server status >>' + params.rstudio_service_log)
-
   def start(self, env):
-    import params
-    env.set_params(params)
-    Execute('service rstudio-server start >>' + params.rstudio_service_log)
+    Execute('systemctl start rstudio-server.service')
 
-  def stop(self, env, upgrade_type=None):
-    import params
-    env.set_params(params)
-    Execute('service rstudio-server stop >>' + params.rstudio_service_log)
+  def stop(self, env):
+    Execute('systemctl stop rstudio-server.service')
+
+  def status(self, env):
+    Execute('systemctl status rstudio-server.service')
+
+  def restart(self, env):
+    Execute('systemctl restart rstudio-server.service')
 
 if __name__ == "__main__":
   Master().execute()

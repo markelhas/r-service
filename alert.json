@@ -1,11 +1,11 @@
 {
-  "R Server": {
+  "R": {
     "service": [],
-    "RSERVER": [
+    "R_SERVER": [
       {
-        "name": "rserver_webui",
-        "label": "RServer Web UI",
-        "description": "This host-level alert is triggered if the RServer Web UI is unreachable.",
+        "name": "rstudio_webui",
+        "label": "R Studio Web UI",
+        "description": "This host-level alert is triggered if the R Studio Web UI is unreachable.",
         "interval": 1,
         "scope": "HOST",
         "source": {

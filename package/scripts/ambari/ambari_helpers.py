@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import os, pwd, grp, signal, platform, yum
 from resource_management import *
 
@@ -31,18 +30,16 @@ def create_hdfs_user(user):
   Execute('hadoop dfs -chown ' + user + ' /user/'+user, user='hdfs')
   Execute('hadoop dfs -chgrp ' + user + ' /user/'+user, user='hdfs')
 
-def stop(pid_file):
-  with open(pid_file, 'r') as fp:
-    try:os.kill(int(fp.read().strip()), signal.SIGTERM)
-    except OSError: pass
-
 def add_rstudio_server():
     import params
     yb = yum.YumBase()
     if yb.rpmdb.searchNevra(name='rstudio-server'):
-      Execute('echo "rstudio-server already installed"', user=params.rstudio_user)
+      Execute('echo "reinstalling rstudio-server "', user=params.rstudio_user)
+      Execute('wget '+params.rstudio_download_url+' -O '+params.rstudio_temp_file+' -a '  + params.rstudio_install_log, user=params.rstudio_user)
+      Execute('yum -y reinstall '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
+      Execute('rm '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
     else:
-      cmd = format()
-      Execute('wget -e https_proxy=http://fi-esp-tapdc-collabprx00.emea.nsn-net.net:8080 '+params.rstudio_download_url+' -O '+params.rstudio_temp_file+' -a '  + params.rstudio_install_log, user=params.rstudio_user)
+      Execute('echo "installing rstudio-server "', user=params.rstudio_user)
+      Execute('wget '+params.rstudio_download_url+' -O '+params.rstudio_temp_file+' -a '  + params.rstudio_install_log, user=params.rstudio_user)
       Execute('yum -y install '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
       Execute('rm '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
