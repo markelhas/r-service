@@ -5,7 +5,7 @@
 	<property>
 		<name>rstudio.download.url</name>
 		<description>URL for downloading R Studio Server</description>
-		<value>http://cosmos99.sm-por.dcpor.nsn-rdnet.net/R/centos7/rstudio-server-rhel-1.1.419-x86_64.rpm</value>
+		<value>https://download2.rstudio.org/rstudio-server-rhel-1.1.419-x86_64.rpm</value>
 	</property>
 	<property>
 		<name>rstudio.server.log</name>
@@ -30,8 +30,7 @@
 	<property>
 		<name>r.libs</name>
 		<description>Comma separated list of R libs to install</description>
-		<value>stringi,rmr2,ggplot2,ggmap</value>
-		<!-- <value>rmr2,Rcpp, RJSONIO, digest, functional, reshape2,\nstringr, plyr, caTools,DT,animation,colorspace,data.table,deldir,doParallel,ggmap,jsonlite,leaflet,lubridate,miniCRAN,plotly,readr,rhandsontable,sendmailR,shiny,shinydashboard,shinythemes,tidyr,withr,R.rsp,R6,RColorBrewer,Rcpp ,RgoogleMaps,XML,assertthat,base64enc,bindrcpp,codetools,crosstalk,curl,data.table,dichromat,digest,dplyr,evaluate,foreach,geosphere,ggplot2,glue,grDevices,graphics,hexbin,highr,hms,htmltools,htmlwidgets,httpuv ,httr,igraph,iterators,jpeg,jsonlite,knitr,lazyeval ,magrittr,mapproj,markdown,methods,mime,munsell,pkgconfig,plyr,png,proto,purrr,raster,reshape2,rjson,rlang,rmarkdown,scales,sourcetools,sp,stats,stringi,stringr,testthat,tibble,tidyselect,tools,utils,viridis,viridisLite,xtable,yaml</value> -->		
+		<value>rmr2,Rcpp, RJSONIO, digest, functional, reshape2,\nstringr, plyr, caTools,DT,animation,colorspace,data.table,deldir,doParallel,ggmap,jsonlite,leaflet,lubridate,miniCRAN,plotly,readr,rhandsontable,sendmailR,shiny,shinydashboard,shinythemes,tidyr,withr,R.rsp,R6,RColorBrewer,Rcpp ,RgoogleMaps,XML,assertthat,base64enc,bindrcpp,codetools,crosstalk,curl,data.table,dichromat,digest,dplyr,evaluate,foreach,geosphere,ggplot2,glue,grDevices,graphics,hexbin,highr,hms,htmltools,htmlwidgets,httpuv ,httr,igraph,iterators,jpeg,jsonlite,knitr,lazyeval ,magrittr,mapproj,markdown,methods,mime,munsell,pkgconfig,plyr,png,proto,purrr,raster,reshape2,rjson,rlang,rmarkdown,scales,sourcetools,sp,stats,stringi,stringr,testthat,tibble,tidyselect,tools,utils,viridis,viridisLite,xtable,yaml</value>		
 	</property>
 	<property>
 		<name>r.libs.dir</name>
@@ -41,7 +40,6 @@
 	<property>
 		<name>r.repo_url</name>
 		<description>URL for downloading additional R packages</description>
-		<!-- <value>http://cran.us.r-project.org</value> <value>https://cran.dcc.fc.up.pt/</value> <value>http://cran.radicaldevelop.com/</value> -->
-		<value>http://cosmos99.sm-por.dcpor.nsn-rdnet.net/miniCRAN/</value>
+		<value>http://cran.us.r-project.org</value>
 	</property>
 </configuration>
