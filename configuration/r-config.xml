@@ -3,9 +3,29 @@
 
 <configuration>
 	<property>
+		<name>epel6.download.url</name>
+		<description>URL for downloading R Studio Server</description>
+		<value>https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm</value>
+	</property>
+	<property>
+		<name>epel7.download.url</name>
+		<description>URL for downloading R Studio Server</description>
+		<value>https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</value>
+	</property>
+	<property>
+		<name>centos6.download.url</name>
+		<description>URL for downloading R Studio Server</description>
+		<value>http://mirror.centos.org/centos/6.9/os/x86_64/Packages/centos-release-6-9.el6.12.3.x86_64.rpm</value>
+	</property>
+	<property>
+		<name>centos7.download.url</name>
+		<description>URL for downloading R Studio Server</description>
+		<value>http://mirror.centos.org/centos/7/os/x86_64/Packages/centos-release-7-4.1708.el7.centos.x86_64.rpm</value>
+	</property>
+	<property>
 		<name>rstudio.download.url</name>
 		<description>URL for downloading R Studio Server</description>
-		<value>https://download2.rstudio.org/rstudio-server-rhel-1.1.419-x86_64.rpm</value>
+		<value>https://download2.rstudio.org/rstudio-server-rhel-1.1.423-x86_64.rpm</value>
 	</property>
 	<property>
 		<name>rstudio.server.log</name>
@@ -30,7 +50,7 @@
 	<property>
 		<name>r.libs</name>
 		<description>Comma separated list of R libs to install</description>
-		<value>rmr2,Rcpp, RJSONIO, digest, functional, reshape2,\nstringr, plyr, caTools,DT,animation,colorspace,data.table,deldir,doParallel,ggmap,jsonlite,leaflet,lubridate,miniCRAN,plotly,readr,rhandsontable,sendmailR,shiny,shinydashboard,shinythemes,tidyr,withr,R.rsp,R6,RColorBrewer,Rcpp ,RgoogleMaps,XML,assertthat,base64enc,bindrcpp,codetools,crosstalk,curl,data.table,dichromat,digest,dplyr,evaluate,foreach,geosphere,ggplot2,glue,grDevices,graphics,hexbin,highr,hms,htmltools,htmlwidgets,httpuv ,httr,igraph,iterators,jpeg,jsonlite,knitr,lazyeval ,magrittr,mapproj,markdown,methods,mime,munsell,pkgconfig,plyr,png,proto,purrr,raster,reshape2,rjson,rlang,rmarkdown,scales,sourcetools,sp,stats,stringi,stringr,testthat,tibble,tidyselect,tools,utils,viridis,viridisLite,xtable,yaml</value>		
+		<value>rmr2,Rcpp,RJSONIO,digest,functional,reshape2,\nstringr,plyr,caTools,DT,animation,colorspace,data.table,deldir,doParallel,ggmap,jsonlite,leaflet,lubridate,miniCRAN,plotly,readr,rhandsontable,sendmailR,shiny,shinydashboard,shinythemes,tidyr,withr,R.rsp,R6,RColorBrewer,Rcpp ,RgoogleMaps,XML,assertthat,base64enc,bindrcpp,codetools,crosstalk,curl,data.table,dichromat,digest,dplyr,evaluate,foreach,geosphere,ggplot2,glue,grDevices,graphics,hexbin,highr,hms,htmltools,htmlwidgets,httpuv ,httr,igraph,iterators,jpeg,jsonlite,knitr,lazyeval ,magrittr,mapproj,markdown,methods,mime,munsell,pkgconfig,plyr,png,proto,purrr,raster,reshape2,rjson,rlang,rmarkdown,scales,sourcetools,sp,stats,stringi,stringr,testthat,tibble,tidyselect,tools,utils,viridis,viridisLite,xtable,yaml,ggmap,dplyr,tidyr,readr,lubridate,DT,data.table,deldir,plotly,shinythemes,rhandsontable,shinydashboard,leaflet</value>
 	</property>
 	<property>
 		<name>r.libs.dir</name>
