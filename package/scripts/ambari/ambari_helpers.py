@@ -58,4 +58,15 @@ def add_rstudio_server():
     Execute('wget '+params.rstudio_download_url+' -O '+params.rstudio_temp_file+' -a '  + params.rstudio_install_log, user=params.rstudio_user)
     Execute('yum -y install '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
     Execute('rm '+params.rstudio_temp_file+' >> ' + params.rstudio_install_log, user=params.rstudio_user)
+
+  if yb.rpmdb.searchNevra(name='shiny-server'):
+    Execute('echo "reinstalling shiny-server "', user=params.rstudio_user)
+    Execute('wget '+params.rshiny.download.url+' -O '+params.rshiny_temp_file+' -a '  + params.rshiny.install.log, user=params.rstudio_user)
+    Execute('yum -y reinstall '+params.rshiny_temp_file+' >> ' + params.rshiny.install.log, user=params.rstudio_user)
+    Execute('rm '+params.rshiny_temp_file+' >> ' + params.rshiny.install.log, user=params.rstudio_user)
+  else:
+    Execute('echo "installing shiny-server "', user=params.rstudio_user)
+    Execute('wget '+params.rshiny.download.url+' -O '+params.rshiny_temp_file+' -a '  + params.rshiny.install.log, user=params.rstudio_user)
+    Execute('yum -y install '+params.rshiny_temp_file+' >> ' + params.rshiny.install.log, user=params.rstudio_user)
+    Execute('rm '+params.rshiny_temp_file+' >> ' + params.rshiny.install.log, user=params.rstudio_user)
   

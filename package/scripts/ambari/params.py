@@ -11,6 +11,7 @@ rstudio_download_url = config['configurations']['r-config']['rstudio.download.ur
 
 rstudio_user = 'root'
 rstudio_temp_file = '/tmp/rstudio-server.rpm'
+rshiny_temp_file = '/tmp/shiny-server.rpm'
 
 r_libs = filter(lambda x: len(x.strip()) > 0, config['configurations']['r-config']['r.libs'].split(','))
 r_repo_url = config['configurations']['r-config']['r.repo_url']

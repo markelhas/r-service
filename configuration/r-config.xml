@@ -28,6 +28,11 @@
 		<value>https://download2.rstudio.org/rstudio-server-rhel-1.1.423-x86_64.rpm</value>
 	</property>
 	<property>
+		<name>rshiny.download.url</name>
+		<description>URL for downloading R Studio Server</description>
+		<value>https://download3.rstudio.org/centos5.9/x86_64/shiny-server-1.5.6.875-rh5-x86_64.rpm</value>
+	</property>
+	<property>
 		<name>rstudio.server.log</name>
 		<description>Log file for rstudio server service</description>
 		<value>/var/log/rstudio_server.log</value>
@@ -36,6 +41,11 @@
 		<name>rstudio.install.log</name>
 		<description>Log file for rstudio server installation</description>
 		<value>/var/log/rstudio_install.log</value>
+	</property>
+	<property>
+		<name>rshiny.install.log</name>
+		<description>Log file for rshiny server installation</description>
+		<value>/var/log/rshiny_install.log</value>
 	</property>
 	<property>
 		<name>rstudio.server.port</name>
