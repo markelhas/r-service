@@ -49,9 +49,6 @@
 					<osFamily>redhat7</osFamily>
 					<packages>
 						<package>
-							<name>epel-release</name>
-						</package>
-						<package>
 							<name>R</name>
 						</package>
 					</packages>
